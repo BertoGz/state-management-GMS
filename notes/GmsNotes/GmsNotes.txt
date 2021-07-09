@@ -1,0 +1,32 @@
+***functions
+one can create functions and pass values/objects/or even another function;
+
+example of a function being fed another function;
+
+//function declaration;
+function onDead(func){
+	func()
+}
+
+
+//in another file the function gets called;
+
+lets pretend that we coded that is a player dies; 
+onDead() gets called automatically;
+
+what is really powerful is we know onDead() gets called;
+so we can take advantage of that and feed onDead a function of our own;
+
+for example:
+onDead(handleDie)
+
+
+function handleDie(){    <---- handleDie is a function that performs whatever we want it to perform!
+	givePlayerMoney();
+	unlockSecretDoor();
+	etc,etc,etc()
+}
+
+
+
+

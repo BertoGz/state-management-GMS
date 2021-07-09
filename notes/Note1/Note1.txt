@@ -1,0 +1,99 @@
+/// Designing a simple rpg element
+
+
+SWORD LOCATED NEAR BLACK BARROW FALLS , dependencies: !GRABBED_BLACK_BARROW_SWORD && player has not joined any clans
+there is a sword item located in barrow falls
+if we aquired the sword we trigger "flag" the event   
+										{ 
+											condition: !GRABBED_BLACK_BARROW_SWORD && Player has not joined any clans, 
+											
+											affirmProps:{active:true, onAquire: setFlag(GRABBED_BLACK_BARROW_SWORD)}
+											negProps:{active:false}
+										}
+
+
+ENEMIE LOCATED NEAR IN BLACK BARROW FALLS , dependencies: GRABBED_BLACK_BARROW_SWORD
+spawns after we have the sword
+if we kill him we flag the event
+
+										  { condition: flag (GRABBED_BLACK_BARROW_SWORD)
+											affirmProps:{active:true, attack:Player, onDeath: drop(gold(2000), KILLED_BARROW_ENEMY}
+											negProps:{active:false}
+											}
+ADVENTURER LOCATED NEAR SHROOMVILLE	, dependencies: KILLED_BARROW_ENEMY	
+we speek to him and gives us a quest to
+follow him to the dungeons 
+											{ condition: flag (KILLED_BARROW_ENEMY)
+											affirmProps:{active:true, state:Wander, onTalk: TALKED TO ADVENTURER}
+											negProps:{active:false}
+											}
+											
+						
+						
+						
+**Flag: To remember something for later user;
+**Dependency: when an object depends on another object's value, this is called a dependency
+
+
+
+
+
+
+1) NPCS/Items to be assigned a STATE based on a condition; 
+2) a dialogue can optionally accept user response such as YES and NO;
+3) user Input response need resulting actions; such as
+	example:
+	"would you like to join the forbidden swordsman clan?" 
+	*user picks yes*
+	
+	the result: game sets a global flag called JOINED_SWORDS_CLANSMEN
+	example side effects:
+	causes other Entities in the game world to change, perhaps
+	new NPC spawns somewhere in the game world.
+	
+Assumption: 
+	Every game entity such as an NPC or even an item on the ground
+	is affected by these so called global flags.
+	
+	
+	
+	
+	
+/// HERE IS A CONDITION. 
+// a condition can point to another condition
+// if a condition has a true and false statement
+// on the if true, we set an object that has props, and onAction statement support
+ADVENTURER_LOCATED_NEAR_SHROOMVILLE={
+	condition: KILLED_BARROW_ENEMY,
+	ifTrue: {props:{ active:true, state:Wander, onTalk: onTalkData}}},
+	ifFalse:{props:{active:false}}   /// object is inactive
+}
+
+
+OnTalk: runs a conversation: requires OnTalkData
+OnDamaged: runs when he is damaged;
+OnDead: runs the second this dies;
+
+
+
+
+
+
+
+
+
+
+function onTalkData(){
+ pc:'hello!'
+ 'player':'get away from me : 'hi!'
+ *chooses option 1*
+ pc:"you shall be killed"
+ *add flag GOT_PC_ANGRY
+ 
+}
+	
+	
+	
+	
+
+	
