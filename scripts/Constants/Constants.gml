@@ -10,7 +10,7 @@ globalvar INPUT_LEFT;
 globalvar INPUT_RIGHT;
 globalvar INPUT_UP;
 globalvar INPUT_DOWN;
-
+globalvar INPUT_F;
 // ITEM_TYPES
 globalvar ITEM_TYPE_NULL;
 globalvar ITEM_TYPE_ARMOUR;
@@ -20,7 +20,6 @@ globalvar ITEM_TYPE_WEAPON;
 //***** CONSTANTS DEFINED
 
 //SCREEN SIZES
-
 SCREEN_WIDTH=384
 SCREEN_HEIGHT=216
 GUI_WIDTH=SCREEN_WIDTH*2
@@ -31,7 +30,7 @@ INPUT_LEFT=ord("A")
 INPUT_RIGHT=ord("D")
 INPUT_UP=ord("W")
 INPUT_DOWN=ord("S")
-
+INPUT_F=ord("F")
 
 // ITEM TYPES
 ITEM_TYPE_NULL =-1
@@ -39,7 +38,12 @@ ITEM_TYPE_ARMOUR = 0;
 ITEM_TYPE_CRAFT = 1;
 ITEM_TYPE_WEAPON = 2;
 
+// 
+globalvar STRING_CHARACTERS;
+STRING_CHARACTERS = " !\"#$%&'()*+,_./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz"
 
+globalvar bitmapFont;
+bitmapFont = font_add_sprite_ext(spr_font,STRING_CHARACTERS,false,0)
 
 
 
