@@ -4,7 +4,7 @@
 
 containerDimensions= {width:GUI_WIDTH/2,height: GUI_HEIGHT/4}
 containerColor=c_white;
-speakerContaineDimensions={width:72,height:72}
+speakerContaineDimensions={width:69,height:69}
 dialogues=[];
 dialogueIndex=0; // the current text to be shown in the dialogue array
 dialogueSurface = surface_create(containerDimensions.width,containerDimensions.height)
@@ -13,13 +13,19 @@ padding = 10 // used to keep elements away from corners
 
 
 function drawContainer(){
-	draw_set_color(containerColor)
+	draw_set_color(make_color_rgb(173,181,206))
 	draw_rectangle(0,0,containerDimensions.width,containerDimensions.height,0)	
 }
 
 function drawSpeakerContainer(){
-	draw_set_color(c_white)
+	var isPlayerSpeaking=false; 
+	if( dialogues[dialogueIndex].from = "main"){
+	isPlayerSpeaking = true
+	}
+	
+	draw_set_color(make_color_rgb(39,61,127))
 	draw_rectangle(0,0,speakerContaineDimensions.width,speakerContaineDimensions.height,0)	
+	draw_sprite_ext(spr_avatar_npc,0,sprite_get_width(spr_avatar_npc)/2+(padding/2),0+(padding/2),isPlayerSpeaking ? 1 : -1,1,0,c_white,1)
 }
 
 function drawText(){

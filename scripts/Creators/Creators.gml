@@ -9,14 +9,10 @@
 
 
 
-function showDialogueBox(_dialogues){
-
+function createDialogueBox(_dialogues){
 	with instance_create_depth(0,0,-99,obj_dialogueBox){
-		containerColor=c_blue
 		dialogues=_dialogues
-		
 	}
-
 }
 
 

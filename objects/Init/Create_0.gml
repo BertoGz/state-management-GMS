@@ -21,7 +21,7 @@ dialogues = [{text:"Hello I have a task for you. Are you up for it?", from:npc.n
 {text:"Good. I want you to go near the bridge and ask to join the fighters guild",from:npc.name},
 {text:"From there he will guid you to your next location.",from:npc.name},
 {text:"Study math and science so you can be one step above everybody else.",from:npc.name}]
-showDialogueBox(dialogues)
+createDialogueBox(dialogues)
 
 
 /*
