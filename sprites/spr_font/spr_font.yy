@@ -449,8 +449,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Gui",
+    "path": "folders/Sprites/Gui.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_font",

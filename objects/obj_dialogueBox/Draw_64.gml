@@ -4,6 +4,7 @@ surface_set_target( dialogueSurface );
 drawContainer()
 drawSpeakerContainer()
 drawText()
+drawOptions()
 surface_reset_target();
 	
 draw_surface(dialogueSurface,0,0)
