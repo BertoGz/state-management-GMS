@@ -5,9 +5,7 @@ walkSpeed=1.5
 xPos=0;
 yPos=0;
 imageAngle=0
-
-
-
+state = states.normal
 
 
 

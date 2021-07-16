@@ -4,7 +4,9 @@
 
 
 //Set WindowSizes
-globalvar gameCamera;
+globalvar gameCamera
+globalvar mainPlayer;
+mainPlayer = instance_find(Player,0)
 display_set_gui_size(GUI_WIDTH,GUI_HEIGHT)
 view_camera[0] = camera_create_view(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 gameCamera=view_camera[0]
@@ -43,6 +45,8 @@ dialogue1 = {
 text:"Hello I have a task for you. Are you up for it?",
 from:other.npc.name}
 dialogue2 = {
+text:"Hello I have a task for you. Are you up for it?",
+from:other.npc.name,
 options:["Sure i am down","No thank you go away"],
 results:[option1,option2]
 }
@@ -52,7 +56,7 @@ results:[option1,option2]
 
 
 
-dialogues=[dialogue1,dialogue2]
+dialogues=[dialogue2]
 
 /*
 dialog1=[

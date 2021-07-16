@@ -47,6 +47,12 @@ bitmapFont = font_add_sprite_ext(spr_font,STRING_CHARACTERS,false,0)
 
 
 
+// character states
+
+enum states{
+normal,
+speaking
+}
 
 function baseDependency(condition,affirm,neg){
 	if (condition){

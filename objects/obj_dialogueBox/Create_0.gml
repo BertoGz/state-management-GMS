@@ -14,14 +14,18 @@ currentDialogue = {}
 dialogueType = "null"
 currInputSelection=0;
 alarm[0]=1
+CUT_OFF_LENGTH = 194;
+
+//mainPlayer.state=states.speaking
+
 
 function handleInputSelection(){
-	
+	var options = currentDialogue.options
 	if (keyboard_check_released(INPUT_DOWN)){
-		currInputSelection++;	
+		if currInputSelection<array_length(options)-1 {currInputSelection++}	
 	}
 	if (keyboard_check_released(INPUT_UP)){
-		currInputSelection--;
+			if currInputSelection>0 {currInputSelection--}
 	}
 }
 
@@ -58,8 +62,7 @@ function drawText(){
 
 	var stringHeight = string_height(str)
 
-	var CUT_OFF_LENGTH = 194;
-	
+
 	var formattedText = string_copy(str,0,CUT_OFF_LENGTH)
 	if (string_length(formattedText)>=CUT_OFF_LENGTH){
 		formattedText = formattedText+"..."
@@ -77,16 +80,24 @@ function drawOptions(){
 	handleInputSelection()
 	xPos=speakerContaineDimensions.width + padding; // starting position
 	yPos=0+padding;
-	
+	var str = currentDialogue.text
+	var formattedText = string_copy(str,0,CUT_OFF_LENGTH)
+	if (string_length(formattedText)>=CUT_OFF_LENGTH){
+		formattedText = formattedText+"..."
+	}
 	var options = currentDialogue.options
-	var stringHeight = string_height(options[0])
-	draw_set_halign(fa_left)
 	draw_set_font(bitmapFont)
+	var stringHeight = string_height(formattedText)
+	var stringTotalHeight = string_height_ext(formattedText, stringHeight, containerDimensions.width-padding-speakerContaineDimensions.width)
+
+	draw_set_halign(fa_left)
+
 	draw_set_color(c_white)
-	draw_sprite(spr_arrow_select,0,xPos,yPos+8+(16*currInputSelection))
+	draw_sprite(spr_arrow_select,0,xPos,yPos+stringTotalHeight+8+(16*currInputSelection))
 	
+	draw_text_ext(xPos,yPos,formattedText,stringHeight,containerDimensions.width-padding-speakerContaineDimensions.width)
 	for (i=0;i<array_length(options);i++){
-		draw_text_ext(xPos+16,yPos+(i*16),options[i],stringHeight,containerDimensions.width-padding-speakerContaineDimensions.width)
+		draw_text_ext(xPos+16,yPos+stringTotalHeight+(i*16),options[i],stringHeight,containerDimensions.width-padding-speakerContaineDimensions.width)
 	}
 		drawContinueText()
 	}
@@ -104,7 +115,7 @@ function drawContinueText(){
 
 
 function getDialogueType(){
- return variable_struct_exists(currentDialogue, "text") ? "text" : "input"
+ return variable_struct_exists(currentDialogue, "options") ? "input" : "text"
  }
 
 function handleGotoNextDialogue(){
