@@ -5,9 +5,15 @@
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_16x16",
+    "path": "sprites/spr_16x16/spr_16x16.yy",
+  },
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "Solid",
+    "path": "objects/Solid/Solid.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

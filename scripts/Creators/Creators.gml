@@ -14,5 +14,9 @@ function createDialogueBox(_dialogues){
 		dialogues=_dialogues
 	}
 }
-
+function closeDialogueBox(){
+	with (instance_find(obj_dialogueBox,0)){
+		instance_destroy()	
+	}
+}
 

@@ -27,6 +27,7 @@ function handleInputSelection(){
 	if (keyboard_check_released(INPUT_UP)){
 			if currInputSelection>0 {currInputSelection--}
 	}
+
 }
 
 
@@ -116,12 +117,17 @@ function getDialogueType(){
  }
 
 function handleGotoNextDialogue(){
-	if (keyboard_check_released(INPUT_F)){
-		if (dialogueIndex < array_length(dialogues)-1 )
+	if (keyboard_check_pressed(INPUT_F)){
+		if (dialogueIndex < array_length(dialogues)-1 && dialogueType="text" )
 		{
 			dialogueIndex++;
 			currentDialogue = dialogues[dialogueIndex] 
 			dialogueType = getDialogueType()
+		} else {
+			
+		var func = currentDialogue.results[currInputSelection]	
+		func()
+
 		}
 	}
 }
