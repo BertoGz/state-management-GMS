@@ -6,7 +6,8 @@ xPos=0;
 yPos=0;
 imageAngle=0
 state = states.normal
-
+sprite_index=spr_player
+imgIndex=0;
 
 
 

@@ -6,3 +6,9 @@
 function print(str){
 show_debug_message(str)	
 }
+
+function printToScreen(str){
+	with (instance_find(Init,0)){
+			screenText=str
+	}
+}

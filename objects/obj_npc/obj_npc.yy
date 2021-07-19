@@ -1,19 +1,13 @@
 {
   "spriteId": {
-    "name": "spr_editor_player",
-    "path": "sprites/spr_editor_player/spr_editor_player.yy",
+    "name": "spr_editor_npc",
+    "path": "sprites/spr_editor_npc/spr_editor_npc.yy",
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": {
-    "name": "spr_16x16",
-    "path": "sprites/spr_16x16/spr_16x16.yy",
-  },
+  "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "baseEntity",
-    "path": "objects/baseEntity/baseEntity.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -38,7 +32,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Player",
+  "name": "obj_npc",
   "tags": [],
   "resourceType": "GMObject",
 }

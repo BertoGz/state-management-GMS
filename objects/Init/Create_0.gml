@@ -12,7 +12,7 @@ view_camera[0] = camera_create_view(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 gameCamera=view_camera[0]
 surface_resize(application_surface, SCREEN_WIDTH*2, SCREEN_HEIGHT*2);
 window_set_size(SCREEN_WIDTH*2, SCREEN_HEIGHT*2);
-
+screenText = "" /// this screen is printed to gui
 
 application_surface_draw_enable(false)
 
@@ -41,35 +41,6 @@ function option2(){
 }
 
 
-dialogue1 = {
-text:"Hello I have a task for you. Are you up for it?",
-from:other.npc.name}
-dialogue2 = {
-text:"Hello I have a task for you. Are you up for it?",
-from:other.npc.name,
-options:["Sure i am down","No thank you go away"],
-results:[option1,option2]
-}
-	
-
-
-
-
-
-dialogues=[dialogue2]
-
-/*
-dialog1=[
-{text:"Hello I have a task for you. Are you up for it?",from:npc.name},
-{condition:
-	[{text:"Yes I am so down for it",result:game_end()},
-	{text:"No thank you",result:false}
-	]}
-]*/
-
-
-createDialogueBox(dialogues)
-
 
 
 
@@ -81,4 +52,15 @@ createDialogueBox(dialogues)
 " LOCATION TO STUDY MATH AND SCIENCE AS WELL AS MANY OTHER CLASSES DOING THOSE CLASSES WILL GRANT"
 +" YOU ACCESS TO GOTO THE SECRET DUNGEON IN FALADOR")
 */
+
+
+function drawActionLabelsToGui(){
+	if (screenText!="")
+	{
+		draw_set_halign(fa_center)
+		draw_set_color(c_white)
+		draw_set_font(bitmapFont)
+		draw_text(GUI_WIDTH/2,GUI_HEIGHT-GUI_HEIGHT/4,screenText)	}
+	screenText=""
+}
 
