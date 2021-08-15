@@ -9,6 +9,7 @@ name="Ernesto"
 
 function res1(){
 	Player.state=states.normal
+	dispatchPlayerReducer(setAlive(false))
 	closeDialogueBox()
 }
 

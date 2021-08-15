@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"Constants","path":"scripts/Constants/Constants.yy",},"order":0,},
+    {"id":{"name":"GameActions","path":"scripts/GameActions/GameActions.yy",},"order":1,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":2,},
     {"id":{"name":"spr_16x16","path":"sprites/spr_16x16/spr_16x16.yy",},"order":4,},
     {"id":{"name":"Solid","path":"objects/Solid/Solid.yy",},"order":2,},
@@ -13,6 +14,7 @@
     {"id":{"name":"Interactable","path":"objects/Interactable/Interactable.yy",},"order":3,},
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},"order":0,},
     {"id":{"name":"Labels","path":"scripts/Labels/Labels.yy",},"order":4,},
+    {"id":{"name":"screen_text","path":"objects/screen_text/screen_text.yy",},"order":2,},
     {"id":{"name":"GmsNotes","path":"notes/GmsNotes/GmsNotes.yy",},"order":1,},
     {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},"order":1,},
     {"id":{"name":"obj_dialogueBox","path":"objects/obj_dialogueBox/obj_dialogueBox.yy",},"order":2,},
@@ -20,6 +22,7 @@
     {"id":{"name":"spr_editor_player","path":"sprites/spr_editor_player/spr_editor_player.yy",},"order":1,},
     {"id":{"name":"spr_block","path":"sprites/spr_block/spr_block.yy",},"order":3,},
     {"id":{"name":"spr_editor_npc","path":"sprites/spr_editor_npc/spr_editor_npc.yy",},"order":0,},
+    {"id":{"name":"GameReducer","path":"scripts/GameReducer/GameReducer.yy",},"order":2,},
     {"id":{"name":"obj_groundItem","path":"objects/obj_groundItem/obj_groundItem.yy",},"order":4,},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},"order":15,},
     {"id":{"name":"Player","path":"objects/Player/Player.yy",},"order":0,},
@@ -27,7 +30,9 @@
     {"id":{"name":"spr_avatar_npc","path":"sprites/spr_avatar_npc/spr_avatar_npc.yy",},"order":0,},
     {"id":{"name":"baseEntity","path":"objects/baseEntity/baseEntity.yy",},"order":5,},
     {"id":{"name":"GameItems","path":"scripts/GameItems/GameItems.yy",},"order":1,},
+    {"id":{"name":"PlayerReducer","path":"scripts/PlayerReducer/PlayerReducer.yy",},"order":3,},
     {"id":{"name":"Sprite4","path":"sprites/Sprite4/Sprite4.yy",},"order":17,},
+    {"id":{"name":"PlayerActions","path":"scripts/PlayerActions/PlayerActions.yy",},"order":0,},
     {"id":{"name":"Creators","path":"scripts/Creators/Creators.yy",},"order":2,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
@@ -67,6 +72,7 @@
     {"folderPath":"folders/Objects/UI/DialogueBox.yy","order":1,"resourceVersion":"1.0","name":"DialogueBox","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Gui.yy","order":8,"resourceVersion":"1.0","name":"Gui","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Editor.yy","order":9,"resourceVersion":"1.0","name":"Editor","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/Redux.yy","order":5,"resourceVersion":"1.0","name":"Redux","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
@@ -76,7 +82,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.3.570",
+    "IDEVersion": "2.3.3.574",
   },
   "resourceVersion": "1.4",
   "name": "GMS23",

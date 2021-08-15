@@ -1,5 +1,4 @@
 event_inherited();
-life=10;
 name="charles"
 walkSpeed=1.5
 xPos=0;

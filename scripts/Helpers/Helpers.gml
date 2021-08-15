@@ -8,7 +8,26 @@ show_debug_message(str)
 }
 
 function printToScreen(str){
-	with (instance_find(Init,0)){
+	with (instance_find(screen_text,0)){
 			screenText=str
 	}
+}
+
+function combineStruct(struct1,struct2){
+	var newStruct = {}
+	var propertiesArray1 = variable_struct_get_names(struct1);
+	var propertiesArray2 = variable_struct_get_names(struct2);
+	
+	 for (var i = 0; i < array_length(propertiesArray1); i++;)
+     { 
+		var propVal = variable_struct_get(struct1,propertiesArray1[i])
+		variable_struct_set(newStruct, propertiesArray1[i], propVal);
+    }
+	  for (var i = 0; i < array_length(propertiesArray2); i++;)
+     {
+	 	var propVal = variable_struct_get(struct2,propertiesArray2[i])
+		variable_struct_set(newStruct, propertiesArray2[i], propVal);
+    }
+	
+	return newStruct
 }
