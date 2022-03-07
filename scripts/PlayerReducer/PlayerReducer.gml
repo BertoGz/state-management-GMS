@@ -17,7 +17,6 @@ function dispatchPlayerReducer(event){
 	case PLAYER_STATE_SET_LIFE:
 		PlayerReducerState = combineStruct(PlayerReducerState,{life:event.payload})
 	break;
-		
 	}
 	print(PlayerReducerState)
 }

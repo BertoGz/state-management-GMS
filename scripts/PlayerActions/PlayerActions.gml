@@ -11,3 +11,4 @@ function setLife(payload){
 function setAlive(payload){
 	return {action:PLAYER_STATE_SET_ALIVE, payload:payload}
 }
+

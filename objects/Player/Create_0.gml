@@ -12,10 +12,10 @@ imgIndex=0;
 
 	
 function walk(){
-var keyLeft = keyboard_check(INPUT_LEFT)
-var keyRight = keyboard_check(INPUT_RIGHT)
-var keyUp = keyboard_check(INPUT_UP)
-var keyDown = keyboard_check(INPUT_DOWN)
+var keyLeft = keyboard_check(INPUT_LEFT) or gamepad_axis_value(0, gp_axislh) < -0.5 
+var keyRight = keyboard_check(INPUT_RIGHT) or  gamepad_axis_value(0, gp_axislh) > 0.5 
+var keyUp = keyboard_check(INPUT_UP) or gamepad_axis_value(0, gp_axislv) < -  0.5
+var keyDown = keyboard_check(INPUT_DOWN) or gamepad_axis_value(0, gp_axislv) >  0.5
 
 xPos=0
 yPos=0

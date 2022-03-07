@@ -104,8 +104,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"4cbada27-acc0-49bc-8574-a7a5babdbf3c","path":"sprites/spr_editor_npc/spr_editor_npc.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4cbada27-acc0-49bc-8574-a7a5babdbf3c","path":"sprites/spr_editor_npc/spr_editor_npc.yy",},"LayerId":{"name":"a4f3cd6b-7257-481f-8b1e-46f76b5d71d2","path":"sprites/spr_editor_npc/spr_editor_npc.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"4cbada27-acc0-49bc-8574-a7a5babdbf3c","path":"sprites/spr_editor_npc/spr_editor_npc.yy",},"LayerId":{"name":"b72c8908-63a9-40d4-9af6-67ebbd2b184c","path":"sprites/spr_editor_npc/spr_editor_npc.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"4cbada27-acc0-49bc-8574-a7a5babdbf3c","path":"sprites/spr_editor_npc/spr_editor_npc.yy",},"LayerId":{"name":"a4f3cd6b-7257-481f-8b1e-46f76b5d71d2","path":"sprites/spr_editor_npc/spr_editor_npc.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_editor_npc","path":"sprites/spr_editor_npc/spr_editor_npc.yy",},"resourceVersion":"1.0","name":"4cbada27-acc0-49bc-8574-a7a5babdbf3c","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -122,7 +122,7 @@
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"9b4b5606-8968-4ca3-8609-9992879c8045","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4cbada27-acc0-49bc-8574-a7a5babdbf3c","path":"sprites/spr_editor_npc/spr_editor_npc.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -139,7 +139,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_editor_npc","path":"sprites/spr_editor_npc/spr_editor_npc.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_editor_npc",
     "tags": [],
     "resourceType": "GMSequence",

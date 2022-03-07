@@ -5,25 +5,17 @@ sprite_index=spr_editor_npc
 imgIndex=0
 imageAngle=random(360)
 state=states.normal
-
-
+talkInstance = noone
+selfPointer = id
 function handleTalk(){
-	
-	if (distance_to_object(Player)<9){
+	if (distance_to_object(Player)<9 && GameReducerState.talkInstance=false){
 		printToScreen(labels.talkTo)
 	
 		if (keyboard_check_pressed(INPUT_F)){
-			
-				if (Player.state=states.normal){
-					onSpeak()
-					Player.state=states.speaking
-				}
-			
-	
+			dispatchGameReducer(onTalkAction(talkInstance))
 		}
 	}
 		
 }
 
-function nullFunction(){}
-onSpeak = nullFunction()
+
